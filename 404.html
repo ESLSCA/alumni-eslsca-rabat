@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Redirection…</title>
+<script>
+  // GitHub Pages n'a pas de vrai routage cote serveur : quand quelqu'un
+  // ouvre un lien du type /HIEN_ISMAILA_REMI, GitHub sert cette page
+  // 404.html. On redirige silencieusement vers index.html en passant
+  // le nom dans le parametre ?p=, que le site sait deja lire.
+  var l = window.location;
+  var slug = l.pathname.slice(1).replace(/\/$/, '');
+  l.replace(
+    l.protocol + '//' + l.host + '/?p=' + encodeURIComponent(slug) + (l.search ? '&' + l.search.slice(1) : '') + l.hash
+  );
+</script>
+</head>
+<body></body>
+</html>
