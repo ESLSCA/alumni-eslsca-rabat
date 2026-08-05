@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /?guest=
+
+Sitemap: https://eslsca-alumni-mba-rabat.com/sitemap.xml
